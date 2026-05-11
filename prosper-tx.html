@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Prosper, TX Window Cleaning — True View Services</title>
+  <meta name="description" content="Exterior window cleaning in Prosper, TX for large glass fronts and luxury neighborhoods. Clean, sharp, and efficient." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+<style>
+    :root{
+      --gold:#C8A74E;
+      --gold2:#E6D68A;
+      --silver:#C7C9CC;
+      --onyx:#0e0f12;
+      --char:#111315;
+      --ink:#0a0b0d;
+    }
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      background:var(--ink);
+      color:white;
+    }
+    .btn-gold{
+      background:linear-gradient(135deg,var(--gold),var(--gold2));
+      color:#0e0f12;
+      box-shadow:0 6px 22px rgba(200,167,78,.35);
+      transition: transform .18s ease, filter .18s ease;
+      will-change: transform;
+    }
+    .btn-gold:hover{
+      filter:saturate(1.08);
+      transform: scale(1.04);
+    }
+    .card{background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.12)}
+    .soft{backdrop-filter:saturate(1.2) blur(10px)}
+    .lux-bg{
+      background:
+        radial-gradient(800px 400px at 12% 10%, rgba(230,214,138,.18), transparent 60%),
+        radial-gradient(700px 380px at 90% 8%, rgba(199,201,204,.18), transparent 60%),
+        linear-gradient(180deg, #17191c 0%, #0b0c0f 80%);
+    }
+    .divider{height:1px;background:linear-gradient(90deg,transparent, rgba(255,255,255,.25), transparent)}
+    /* Form controls (consistent sizing + prevent overlap) */
+    .control{
+      width:100%;
+      border-radius:.5rem;
+      border:1px solid rgba(255,255,255,.15);
+      background:rgba(255,255,255,.05);
+      padding:.5rem .75rem;
+      outline:none;
+    }
+    .control:focus{
+      border-color:rgba(230,214,138,.55);
+      box-shadow:0 0 0 3px rgba(200,167,78,.15);
+    }
+  </style>
+<style>
+  /* Booking dropdown menu — ONLY when opened */
+  select option{
+    background-color:#0a0b0d !important;
+    color:#ffffff !important;
+  }
+/* ===== LOCKED HEADER ===== */
+.city-header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  height: 64px;              /* 🔒 header NEVER changes */
+  background: rgba(0,0,0,.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+/* ===== LOGO ===== */
+.logo-wrap{
+  position: absolute;
+  left: 380px;
+  top: 50%;
+  transform: translateY(calc(-50% + var(--logo-y, 0px)));
+}
+
+.logo-wrap img{
+  height: var(--logo-size, 28px);
+  width: auto;
+}
+
+/* ===== BACK BUTTON ===== */
+.back-btn{
+  position: absolute;
+  right: 400px;
+  top: 50%;
+  transform: translateY(calc(-50% + var(--back-y, 0px)));
+
+  font-size: 12px;
+  color: rgba(255,255,255,.7);
+  transition: color .2s ease;
+}
+
+.back-btn:hover{
+  color: white;
+}
+:root{
+  --logo-size: 102px;   /* logo size */
+  --logo-y: -2px;      /* logo vertical position */
+  --back-y: -1px;      /* back button vertical position */
+}
+</style>
+
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <header class="city-header">
+  <a href="index.html" class="logo-wrap">
+   <img alt="True View Services logo" src="images/trueview-logo.png">
+  </a>
+
+  <a href="index.html#cities" class="back-btn">
+    ← All service areas
+  </a>
+</header>
+  <main class="flex-1">
+    <section class="lux-bg">
+      <div class="max-w-6xl mx-auto px-4 py-16 lg:py-20 grid lg:grid-cols-2 gap-10 items-start">
+        <div class="space-y-6">
+          <p class="text-xs tracking-[0.25em] text-white/50 uppercase">PROSPER, TEXAS</p>
+          <h1 class="text-3xl sm:text-4xl font-semibold leading-tight">
+            Precision window cleaning for<br/>Prosper’s high-end neighborhoods.
+          </h1>
+          <div class="divider"></div>
+          <p class="text-sm text-white/70 max-w-md">
+            Prosper homes come with big glass, tall entries, and long sightlines. True View keeps that glass
+            invisible so the architecture and landscaping do the talking.
+          </p>
+
+          <div class="grid gap-3 text-sm">
+            <div class="flex items-start gap-2">
+              <span class="mt-1 text-[var(--gold)]">◆</span>
+              <p><strong>Common neighborhoods:</strong> Windsong Ranch, Star Trail, Gentle Creek, Lakes of La Cima,
+              Whitley Place, and surrounding luxury areas.</p>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="mt-1 text-[var(--gold)]">◆</span>
+              <p><strong>Use cases:</strong> maintaining curb appeal, refreshing glass around pools and patios, and
+              pre-event cleaning before hosting.</p>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="mt-1 text-[var(--gold)]">◆</span>
+              <p><strong>System:</strong> Water-fed pole with pure water for tall, multi-story glass and big front elevations.</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="#booking" class="btn-gold rounded-xl px-5 py-3 text-sm font-semibold inline-flex items-center gap-2">
+              Book Prosper visit
+              <span class="text-xs">↗</span>
+            </a>
+            <p class="text-[11px] text-white/60">Built for large homes and detailed drive-ups.</p>
+          </div>
+
+          <div class="mt-6 grid sm:grid-cols-3 gap-4 text-xs text-white/65">
+            <div class="card soft rounded-xl p-3">
+              <p class="text-[10px] tracking-[0.2em] uppercase text-white/40 mb-1">BIG GLASS</p>
+              <p class="text-sm font-semibold">Front towers & entries</p>
+            </div>
+            <div class="card soft rounded-xl p-3">
+              <p class="text-[10px] tracking-[0.2em] uppercase text-white/40 mb-1">FIRST-TIME OFFER</p>
+              <p class="text-sm font-semibold">$50 off</p>
+            </div>
+            <div class="card soft rounded-xl p-3">
+              <p class="text-[10px] tracking-[0.2em] uppercase text-white/40 mb-1">POOL & PATIO</p>
+              <p class="text-sm font-semibold">Perfect for outdoor spaces</p>
+            </div>
+          </div>
+        </div>
+
+         <!-- Booking card -->
+        <div id="booking" class="card soft rounded-2xl p-6 lg:p-7 mt-4 lg:mt-0 w-full max-w-xl ml-auto">
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <div class="min-w-0">
+              <p class="text-xs tracking-[0.22em] text-white/50 uppercase">BOOK PROSPER</p>
+              <h2 class="text-lg font-semibold mt-1">Request a Prosper appointment</h2>
+            </div>
+            <span class="text-[11px] text-white/60 shrink-0">$50 off first service</span>
+          </div>
+
+          <form id="bookingForm" class="grid md:grid-cols-2 gap-4 min-w-0">
+
+            <!-- First / Last -->
+            <div class="grid gap-1 min-w-0">
+              <label class="text-xs text-white/70">First Name</label>
+              <input required name="first_name" class="control" placeholder="First name" />
+            </div>
+
+            <div class="grid gap-1 min-w-0">
+              <label class="text-xs text-white/70">Last Name</label>
+              <input required name="last_name" class="control" placeholder="Last name" />
+            </div>
+
+            <!-- Phone / Email -->
+            <div class="grid gap-1 min-w-0">
+              <label class="text-xs text-white/70">Phone</label>
+              <input required name="phone" inputmode="tel" class="control" placeholder="214-901-3709" />
+            </div>
+
+            <div class="grid gap-1 min-w-0">
+              <label class="text-xs text-white/70">Email</label>
+              <input required type="email" name="email" class="control" placeholder="you@example.com" />
+            </div>
+
+            <!-- Service / Date -->
+            <div class="grid gap-1 min-w-0">
+              <label class="text-xs text-white/70">Service</label>
+              <select name="service" class="control">
+                <option>Exterior Window Cleaning</option>
+                <option>Full Detail (Exterior + Screens)</option>
+              </select>
+            </div>
+
+            <div class="grid gap-1 min-w-0">
+              <label class="text-xs text-white/70">Preferred Date</label>
+              <input type="date" name="date" class="control" />
+            </div>
+
+            <!-- Time -->
+            <div class="grid gap-1 min-w-0 md:col-span-2">
+              <label class="text-xs text-white/70">Preferred Time</label>
+              <input type="time" name="time" class="control md:max-w-[220px]" />
+            </div>
+
+            <!-- City -->
+            <div class="grid gap-1 min-w-0 md:col-span-2">
+              <label class="text-xs text-white/70">City / Area</label>
+              <input name="city" class="control" value="Propser, TX" />
+            </div>
+
+            <!-- Address -->
+            <div class="grid gap-1 min-w-0 md:col-span-2">
+              <label class="text-xs text-white/70">Service Address</label>
+              <input required name="address" class="control" placeholder="Street address (ex: 123 Main St)" />
+            </div>
+
+            <!-- Notes -->
+            <div class="grid gap-1 min-w-0 md:col-span-2">
+              <label class="text-xs text-white/70">Notes</label>
+              <textarea name="notes" rows="3" class="control" placeholder="Gate code, size of home, glass details, etc."></textarea>
+            </div>
+
+            <!-- Submit -->
+            <div class="md:col-span-2 flex flex-wrap items-center gap-3">
+              <button type="submit" class="rounded-xl px-5 py-3 text-sm font-medium btn-gold">
+                Send Prosper request
+              </button>
+              <span class="text-xs text-white/70">You’ll get a confirmation by phone or email.</span>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-xs text-white/60 flex flex-wrap items-center gap-4 justify-between">
+      <div>© <span id="year"></span> True View Services • Prosper, TX</div>
+      <a href="index.html#home" class="text-[11px] text-white/60 hover:text-white/90">Back to main site</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const bf = document.getElementById('bookingForm');
+    bf.addEventListener('submit', function(e){
+      e.preventDefault();
+      const f = e.target;
+      const lines = [
+        'City Page: Prosper, TX',
+        'Name: ' + f.name.value.trim(),
+        'Phone: ' + f.phone.value.trim(),
+        'Email: ' + f.email.value.trim(),
+        'Service: ' + f.service.value,
+        'Preferred Date: ' + (f.date.value || '(any)'),
+        'Preferred Time: ' + (f.time.value || '(any)'),
+        'City/Area: ' + f.city.value.trim(),
+        'Notes: ' + (f.notes.value.trim() || '')
+      ];
+      const subject = encodeURIComponent('Prosper Booking Request — ' + f.service.value);
+      const body = encodeURIComponent(lines.join('\n') + '\n—\nSubmitted via Prosper city page');
+      window.location.href = 'mailto:Trueviewimpact@gmail.com?subject=' + subject + '&body=' + body;
+    });
+  </script>
+</body>
+</html>
