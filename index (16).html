@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>True View Services — Luxury Exterior Window Cleaning</title>
+  <meta name="description" content="Luxury exterior window cleaning in Northwest Arkansas & North Dallas. Water‑fed pole system. $50 off first service. Free quotes." />
+  <meta property="og:title" content="True View Services — Luxury Exterior Window Cleaning" />
+  <meta property="og:description" content="Luxury exterior window cleaning. Water-fed pole, purified water, streak‑free glass. NWA & North Dallas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="favicon-trueview.png" />
+  <link rel="icon" href="favicon-trueview.png" type="image/png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+/* Glow animation for booking card */
+@keyframes tvGlowPulse {
+  0%   { box-shadow: 0 0 0 rgba(200,167,78,0), 0 0 0 rgba(230,214,138,0); transform: scale(1); }
+  25%  { box-shadow: 0 0 0 2px rgba(200,167,78,.35), 0 0 28px rgba(200,167,78,.35); }
+  55%  { box-shadow: 0 0 0 3px rgba(230,214,138,.45), 0 0 46px rgba(230,214,138,.35); transform: scale(1.01); }
+  100% { box-shadow: 0 0 0 rgba(200,167,78,0), 0 0 0 rgba(230,214,138,0); transform: scale(1); }
+}
+
+.booking-glow {
+  animation: tvGlowPulse 1.35s ease-out 1;
+  border-color: rgba(230,214,138,.55) !important;
+}
+
+    :root{--gold:#C8A74E;--gold2:#E6D68A;--silver:#C7C9CC;--black:#0e0f12;--char:#121417}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; background:var(--black); color:white}
+    .btn-gold{
+  background: linear-gradient(135deg, #C8A74E, #E6D68A);
+  color: #0e0f12;
+  box-shadow: 0 6px 22px rgba(200,167,78,.35);
+  transition: transform .18s ease, filter .18s ease;
+  will-change: transform;
+}
+
+.btn-gold:hover{
+  transform: scale(1.05);
+  filter: saturate(1.08);
+}
+
+    .card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)}
+    .lux-bg{background:
+      radial-gradient(1200px 600px at 10% 5%, rgba(230,214,138,.30), transparent 60%),
+      radial-gradient(900px 500px at 85% 20%, rgba(199,201,204,.25), transparent 60%),
+      linear-gradient(180deg, #1a1c20 0%, #0e0f12 80%)}
+    .glass-sheen{background:linear-gradient(120deg, rgba(255,255,255,.18) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,.12) 80%)}
+    .divider{height:1px;background:linear-gradient(90deg,transparent, rgba(255,255,255,.2), transparent)}
+    section[id]{scroll-margin-top:90px}
+    nav a.active{color:var(--gold)}
+  </style>
+<style>
+
+
+  /* Only Book an Appointment section */
+  #booking {
+    color-scheme: dark;
+  }
+
+  /* Keep the CLOSED select looking like your other inputs */
+  #booking select {
+    background: rgba(255,255,255,.05);
+    color: rgba(255,255,255,.92);
+    border: 1px solid rgba(255,255,255,.15);
+  }
+
+  /* Try to force the OPEN list too (some browsers ignore it) */
+  #booking select option {
+    background: #0a0b0d !important;
+    color: #ffffff !important;
+  }	
+
+
+
+/* ===== Choose Your City cards (background-image fade) ===== */
+.city-card{
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.12);
+  min-height: 180px;
+
+  background-size: cover;
+  background-position: center;
+
+ 
+
+  justify-content: flex-end;
+
+  transition: transform .25s ease, filter .25s ease;
+}
+/* ===== BIG LOGO + SLIM HEADER ===== */
+
+#siteHeader .max-w-7xl{
+  min-height:58px;     /* keeps header slim */
+  padding-top:2px;     /* very tight padding */
+  padding-bottom:2px;
+}
+
+#siteHeader a.scroll-link img{
+  position: static !important;
+  transform:none !important;
+
+  height: clamp(52px, 6vw, 92px);   /* BIG again */
+  width:auto;
+  max-width:260px;
+  object-fit:contain;
+}
+
+/* Slightly smaller on tiny phones only */
+@media (max-width:420px){
+  #siteHeader a.scroll-link img{
+    height:48px;
+    max-width:190px;
+  }
+}
+
+/* ===============================
+   CHOOSE YOUR CITY – CLEAN GRID
+================================ */
+
+.city-grid-wrap{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.city-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+@media (max-width: 900px){
+  .city-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px){
+  .city-grid{ grid-template-columns: 1fr; }
+}
+
+.city-card{
+
+
+  background-size: cover;
+  background-position: center;
+
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 12px 28px rgba(0,0,0,.45);
+
+ 
+  align-items: left;
+  text-decoration: none;
+
+  transition: transform .25s ease, border-color .25s ease;
+}
+
+/* REAL fade to the RIGHT */
+.city-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    to left,
+    rgba(0,0,0,.10) 0%,
+    rgba(0,0,0,.45) 45%,
+    rgba(0,0,0,.95) 100%
+  );
+}
+
+.city-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.55) 0%,
+    rgba(0,0,0,0) 60%
+  );
+}
+
+.city-card {
+  border-radius: 18px;
+  border: none;
+  box-shadow: none;
+}
+
+.city-card:hover {
+  box-shadow: 0 0 0 1px rgba(212,175,55,0.5); /* gold */
+}
+
+
+.city-content{
+  position: relative;
+  padding: 14px;
+}
+
+.city-region{
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.7);
+  margin-bottom: 6px;
+}
+
+.city-content h3{
+  font-size: 1.05rem;
+  font-weight: 650;
+  color: #fff;
+  margin: 0;
+}
+
+.city-content p{
+  font-size: .92rem;
+  color: rgba(255,255,255,.82);
+  margin-top: 6px;
+}
+
+/* City card text – left aligned luxury style */
+.city-card .overlay {
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  right: auto;
+  text-align: left;
+  z-index: 2;
+}
+
+.city-card .overlay h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.city-card .overlay p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  opacity: .85;
+}
+
+/* Optional: slightly darker gradient so text pops */
+.city-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.65) 0%,
+    rgba(0,0,0,0.25) 45%,
+    rgba(0,0,0,0.05) 100%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+}
+/* Brighten city text */
+.city-content h3 {
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.85);
+}
+
+.city-content p,
+.city-content .city-region {
+  color: rgba(255,255,255,0.9);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.75);
+}
+
+  /* =========================
+     SERVICE AREAS: Upscale spacing + gold underline + scroll reveal
+  ========================= */
+
+  /* Narrower section (more premium) */
+  .service-areas {
+    padding: 84px 0 64px;
+  }
+  .service-areas-inner {
+    max-width: 1120px;          /* <— narrower than full width */
+    margin: 0 auto;
+    padding: 0 24px;            /* safe padding for small screens */
+  }
+
+  /* Title + gold accent underline */
+  .service-areas-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .service-areas-title {
+    position: relative;
+    margin: 0 0 12px;
+    font-size: 34px;
+    font-weight: 650;
+    letter-spacing: 0.6px;
+    color: #fff;
+  }
+  .service-areas-title::after {
+    content: "";
+    display: block;
+    width: 96px;
+    height: 2px;
+    margin: 14px auto 0;
+    background: linear-gradient(90deg,
+      rgba(212,175,55,0) 0%,
+      rgba(212,175,55,0.95) 50%,
+      rgba(212,175,55,0) 100%
+    );
+    border-radius: 999px;
+  }
+
+  /* Subtitle */
+  .service-areas-subtitle {
+    margin: 0;
+    font-size: 15px;
+    color: rgba(255,255,255,0.72);
+  }
+
+  /* Hide subtitle on mobile */
+  @media (max-width: 640px) {
+    .service-areas-subtitle { display: none; }
+    .service-areas-title { font-size: 28px; }
+    .service-areas-header { margin-bottom: 28px; }
+  }
+
+  /* Fade-in animation when scrolling */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 700ms ease, transform 700ms ease;
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Optional: stagger city cards slightly (nice premium touch) */
+  .reveal.is-visible .city-card {
+    animation: cardIn 650ms ease both;
+  }
+  .reveal.is-visible .city-card:nth-child(1)  { animation-delay: 0ms; }
+  .reveal.is-visible .city-card:nth-child(2)  { animation-delay: 60ms; }
+  .reveal.is-visible .city-card:nth-child(3)  { animation-delay: 120ms; }
+  .reveal.is-visible .city-card:nth-child(4)  { animation-delay: 180ms; }
+  .reveal.is-visible .city-card:nth-child(5)  { animation-delay: 240ms; }
+  .reveal.is-visible .city-card:nth-child(6)  { animation-delay: 300ms; }
+  .reveal.is-visible .city-card:nth-child(7)  { animation-delay: 360ms; }
+  .reveal.is-visible .city-card:nth-child(8)  { animation-delay: 420ms; }
+  .reveal.is-visible .city-card:nth-child(9)  { animation-delay: 480ms; }
+
+  @keyframes cardIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+/* FORCE the city layout back to a 3-column grid */
+.service-areas .city-grid{
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  align-items: stretch;
+}
+
+/* Make each city card a consistent “card” height again */
+.service-areas .city-card{
+  width: 100% !important;
+  min-height: 175px !important;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .service-areas .city-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 640px){
+  .service-areas .city-grid{
+    grid-template-columns: 1fr !important;
+  }
+}
+/* City card hover – subtle luxury zoom + darken */
+.city-card {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.city-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  transition: background 0.45s ease;
+  z-index: 1;
+}
+
+.city-card:hover {
+  transform: scale(1.035);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
+.city-card:hover::before {
+  background: rgba(0, 0, 0, 0.38);
+}
+
+/* Ensure text stays above overlay */
+.city-card .city-content {
+  position: relative;
+  z-index: 2;
+}
+.reveal{
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+</style>
+</head>
+<body>
+  <header id="siteHeader" class="sticky top-0 z-40 border-b border-white/10 bg-black/60 backdrop-blur-md" style="overflow:visible;">
+    <div class="max-w-7xl mx-auto px-4 py-0.5 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-4 scroll-link">
+        <img alt="True View Services logo" src="trueview-logo.png" style="height:80px; width:auto; position:relative; z-index:10;">
+      </a>
+      <nav id="mainNav" class="hidden md:flex items-center gap-6 text-sm translate-y-[6px]">
+
+        <a href="#about" class="hover:opacity-80 scroll-link">About</a>
+        <a href="#story" class="hover:opacity-80 scroll-link">How We Started</a>
+        <a href="#services" class="hover:opacity-80 scroll-link">Services</a>
+        <a href="#process" class="hover:opacity-80 scroll-link">Process</a>
+        <a href="#faqs" class="hover:opacity-80 scroll-link">FAQ</a>
+        <a href="#booking" class="hover:opacity-80 scroll-link">Book</a>
+        <a href="#contact" class="hover:opacity-80 scroll-link">Contact</a>
+	
+	<a href="#work-with-us" class="hover:opacity-80 scroll-link">Work With Us</a>
+
+
+      </nav>
+     <a href="#booking" class="rounded-full px-4 py-2 text-sm btn-gold scroll-link translate-y-[6px]">Book an Appointment</a>
+
+    </div>
+  </header>
+
+  <section id="home" class="relative overflow-hidden">
+  <!-- Background image -->
+  <div
+    class="absolute inset-0 bg-cover bg-center"
+    style="background-image:url('./hero-bg.jpg');"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Fade overlay -->
+  <div class="absolute inset-0 bg-black/55" aria-hidden="true"></div>
+
+  <!-- Sheen (optional) -->
+  <div class="absolute inset-0 opacity-25 glass-sheen" aria-hidden="true"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 py-24 md:py-32 grid md:grid-cols-2 gap-12 items-center">
+    <!-- LEFT: Title + buttons -->
+    <div>
+      <h2 class="text-5xl md:text-7xl font-bold mb-2 tracking-tight" style="letter-spacing: 0.12em;"><span style="background: linear-gradient(135deg, #C8A74E, #E6D68A, #C8A74E); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">TRUE</span><span style="background: linear-gradient(135deg, #9a9ea6, #d4d7dc, #b0b4bc, #e8eaed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">VIEW</span></h2>
+      <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-widest text-white/70">
+        NWA & North Dallas • Professional Service • Detail Focused
+      </p>
+
+      <h1 class="text-4xl md:text-6xl font-semibold leading-tight">
+        Luxury Exterior Window Cleaning
+      </h1>
+
+      <p class="mt-4 text-white/85 max-w-md prose">
+        Premium, streak-free results using purified water and a professional brush system. Meticulous frames. Crystal screens. First impressions that sparkle.
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center gap-4">
+        <a href="#booking" class="rounded-xl px-5 py-3 text-sm font-medium btn-gold scroll-link">
+          Book an Appointment
+        </a>
+
+        <a href="#services" class="rounded-xl border border-white/20 px-5 py-3 text-sm font-medium hover:bg-white/5 scroll-link">
+          See Services
+        </a>
+
+        <span class="ml-auto md:ml-0 text-xs text-white/80 border border-white/15 rounded-full px-3 py-1">
+          $50 off first service • Free quote
+        </span>
+      </div>
+    </div>
+
+    <!-- RIGHT: Quote card -->
+   <!-- RIGHT: Quote card -->
+<div id="quote-box" class="card rounded-3xl p-8 max-w-md w-full md:justify-self-end">
+  <h3 class="text-2xl font-semibold mb-2">Get a Free Quote</h3>
+  <p class="text-white/75 text-sm mb-6">
+    No pressure. Fast response. Exterior window cleaning tailored to your home.
+  </p>
+
+<form class="space-y-4" id="heroQuoteForm">
+    <input
+       
+      type="text"
+      placeholder="Full Name"
+      name="full_name"
+      class="w-full rounded-xl bg-white/5 border border-white/15 px-4 py-3 text-sm text-white placeholder-white/50 focus:outline-none"
+      required
+    />
+
+    <input
+      type="email"
+      placeholder="Email Address"
+      name="email"
+      class="w-full rounded-xl bg-white/5 border border-white/15 px-4 py-3 text-sm text-white placeholder-white/50 focus:outline-none"
+      required
+    />
+
+    <input
+      type="tel"
+      placeholder="Phone Number"
+      name="phone"
+      class="w-full rounded-xl bg-white/5 border border-white/15 px-4 py-3 text-sm text-white placeholder-white/50 focus:outline-none"
+      required
+    />
+
+    <input
+      type="text"
+      placeholder="Address"
+      name="address"
+      class="w-full rounded-xl bg-white/5 border border-white/15 px-4 py-3 text-sm text-white placeholder-white/50 focus:outline-none"
+      required
+    />
+
+    <textarea
+      rows="3"
+      placeholder="Brief description (optional)"
+      name="description"
+      class="w-full rounded-xl bg-white/5 border border-white/15 px-4 py-3 text-sm text-white placeholder-white/50 focus:outline-none"
+    ></textarea>
+
+    <button
+      type="submit"
+      class="w-full btn-gold rounded-xl px-5 py-3 text-sm font-semibold"
+    >
+      Request My Free Quote
+    </button>
+  </form>
+
+  <div id="quote-thank-you" class="hidden text-center py-10">
+    <h4 class="text-2xl font-semibold text-[var(--gold)] mb-2">Thank you!</h4>
+    <p class="text-white/80 text-sm max-w-sm mx-auto">
+      Your quote request has been received. We’ll be in touch shortly to go over details and availability.
+    </p>
+    <p class="mt-3 text-xs text-white/60">
+      We usually respond within <span class="text-[var(--gold)] font-medium">24 hours</span>.
+    </p>
+  </div>
+</div>
+
+  </section>
+
+  <div class="divider my-10"></div>
+
+  <section id="about" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-10 items-start">
+      <div class="md:col-span-2">
+        <h2 class="text-3xl font-semibold mb-4">About True View</h2>
+        <p class="text-white/80 leading-relaxed">
+          True View Services brings a <span style="color:var(--gold)">luxury‑grade</span> standard to residential exterior window cleaning.
+          We specialize in a water‑fed pole system using deionized water for a spot‑free finish that keeps glass brilliant longer.
+        </p>
+        <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm text-white/80">
+          <li class="card rounded-xl p-4">• Premium homes & estates</li>
+          <li class="card rounded-xl p-4">• Water‑fed pole — safe for high glass</li>
+          <li class="card rounded-xl p-4">• Detail‑forward screens & frames</li>
+          <li class="card rounded-xl p-4">• NWA & North Dallas</li>
+        </ul>
+      </div>
+      <aside class="card rounded-2xl p-6">
+        <div class="text-sm text-white/70">Offers</div>
+        <div class="mt-2 text-sm">• $50 off first service</div>
+        <div class="text-sm">• Always free quotes</div>
+      
+      </aside>
+    </div>
+  </section>
+
+  <section id="story" class="py-20 bg-white/5">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl font-semibold mb-4">How We Started</h2>
+        <p class="text-white/80">Founded by Brenden Preston and Alex Fugiel, True View started with a simple idea: premium service that respects the home, the client’s time, and the craft. What began as detailed exterior glass care turned into a methodical approach—purified water, safe tools, professional finishes—that consistently outperforms the old squeegee routine.</p>
+        <p class="mt-4 text-white/80">Today, we bring that same precision to neighborhoods across Northwest Arkansas and North Dallas—raising the bar for how clean glass should look and feel.</p>
+      </div> <div class="founders-gear">
+ 
+      <div class="grid grid-cols-2 gap-4"><div class="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10">
+  <img
+    src="founders.jpg"
+    alt="True View Services founders"
+    class="w-full h-full object-cover"
+  >
+</div>
+
+</div>
+
+  </section>
+
+<!-- =======================
+     GOOGLE REVIEWS
+======================= -->
+<section id="reviews" class="py-20 relative">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <p class="text-xs uppercase tracking-[.22em] text-white/60">What Our Clients Say</p>
+      <h2 class="mt-2 text-3xl md:text-4xl font-semibold">Google Reviews</h2>
+      <div class="mt-3 h-[2px] w-28 rounded-full mx-auto"
+           style="background: linear-gradient(90deg, rgba(212,175,55,0), rgba(212,175,55,.95), rgba(212,175,55,0));">
+      </div>
+    </div>
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-75d06dcc-cecd-4929-91e7-5e77db495068" data-elfsight-app-lazy></div>
+  </div>
+</section>
+
+<!-- =======================
+     RESULTS (REWORKED)
+======================= -->
+<section id="results" class="py-24 relative overflow-hidden">
+  <!-- soft background glow -->
+  <div class="absolute inset-0 -z-10 opacity-35" aria-hidden
+       style="background:
+        radial-gradient(900px 260px at 15% 10%, rgba(230,214,138,.22), transparent 60%),
+        radial-gradient(800px 240px at 85% 20%, rgba(199,201,204,.18), transparent 60%);">
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+      <div>
+        <p class="text-xs uppercase tracking-[.22em] text-white/60">Proof</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-semibold">What Sets Us Apart</h2>
+
+        <!-- gold underline -->
+        <div class="mt-3 h-[2px] w-28 rounded-full"
+             style="background: linear-gradient(90deg, rgba(212,175,55,0), rgba(212,175,55,.95), rgba(212,175,55,0));">
+        </div>
+
+        <p class="mt-4 text-white/75 max-w-2xl">
+          Crystal-clear glass isn’t luck — it’s process. Purified water, pro brushes, and detail work that makes premium homes look premium.
+        </p>
+      </div>
+
+     
+    </div>
+
+    <!-- KPI row -->
+    <div class="mt-10 grid sm:grid-cols-3 gap-4">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+        <div class="text-xs text-white/60 uppercase tracking-widest">Finish</div>
+        <div class="mt-2 text-lg font-semibold">Spot-Free Dry</div>
+        <p class="mt-2 text-sm text-white/75">Deionized water dries clean — no minerals left behind.</p>
+      </div>
+
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+        <div class="text-xs text-white/60 uppercase tracking-widest">Precision</div>
+        <div class="mt-2 text-lg font-semibold">Detail-Focused Process</div>
+        <p class="mt-2 text-sm text-white/75">Every window cleaned with precision to achieve a flawless, uniform finish.</p>
+      </div>
+
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+        <div class="text-xs text-white/60 uppercase tracking-widest">Detail</div>
+        <div class="mt-2 text-lg font-semibold">Frames & Screens</div>
+        <p class="mt-2 text-sm text-white/75">Complete look — not just “good from the street.”</p>
+      </div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="mt-10 grid lg:grid-cols-12 gap-6">
+
+<!-- Left column -->
+<div class="lg:col-span-7 grid gap-6">
+
+  <!-- Left: Featured -->
+  <div class="rounded-3xl overflow-hidden border border-white/10 bg-white/5">
+    <div class="aspect-[16/10] overflow-hidden">
+      <img
+        src="feature.jpg"
+        alt="Featured exterior window cleaning"
+        class="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500">
+    </div>
+
+    <div class="p-5">
+      <div class="flex items-center justify-between gap-4">
+        <div class="text-sm font-medium">Front elevation — uniform, streak-free finish</div>
+        
+      </div>
+      <p class="mt-2 text-sm text-white/75">
+        The goal is a consistent reflection with no haze, spots, or drip lines — especially in direct sun.
+      </p>
+    </div>
+  </div>
+
+  <!-- Left: Additional image -->
+  <div class="rounded-3xl overflow-hidden border border-white/10 bg-white/5">
+    <div class="aspect-[16/11] overflow-hidden">
+      <img
+        src="job-5.jpg"
+        alt="Additional exterior window cleaning detail"
+        class="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500">
+    </div>
+
+    <div class="p-4 text-sm text-white/80">
+      Second-story glass cleaned safely via water-fed pole.
+    </div>
+  </div>
+
+</div>
+
+
+      <!-- Right: 3 tiles -->
+      <div class="lg:col-span-5 grid gap-6">
+        <div class="rounded-3xl overflow-hidden border border-white/10 bg-white/5">
+          <div class="aspect-[16/10] overflow-hidden">
+            <img src="job-1.jpg"
+                 alt="Before and after window cleaning"
+                 class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500">
+          </div>
+          <div class="p-4 text-sm text-white/80">Exterior detailing completed with the same professional process used throughout the property.</div>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden border border-white/10 bg-white/5">
+          <div class="aspect-[16/10] overflow-hidden">
+            <img src="job-2.jpg"
+                 alt="Detail work on frames and tracks"
+                 class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500">
+          </div>
+          <div class="p-4 text-sm text-white/80">Equipment chosen for precision, not shortcuts</div>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden border border-white/10 bg-white/5">
+          <div class="aspect-[16/10] overflow-hidden">
+            <img src="job-3.jpg"
+                 alt="Screens washed and dried"
+                 class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500">
+          </div>
+          <div class="p-4 text-sm text-white/80">Screens washed & dried for a complete look.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials strip -->
+    <div class="mt-10 grid md:grid-cols-3 gap-4">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+        <div class="text-xs text-white/60">Homeowner — NWA</div>
+        <p class="mt-3 text-sm text-white/85">
+          “Best our windows have looked since we moved in. No streaks — just clarity.”
+        </p>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+        <div class="text-xs text-white/60">Homeowner — North Dallas</div>
+        <p class="mt-3 text-sm text-white/85">
+          “Professional, on time, and the glass literally sparkles in the morning light.”
+        </p>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+        <div class="text-xs text-white/60">Repeat Client</div>
+        <p class="mt-3 text-sm text-white/85">
+          “They didn’t just clean — they detailed. Huge difference on the frames and screens.”
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-3xl border border-white/10 bg-white/5 p-6">
+      <div>
+        <div class="text-lg font-semibold">Want results like this?</div>
+        <div class="text-sm text-white/75 mt-1">Get a fast quote — we’ll confirm your service area and details.</div>
+      </div>
+     
+
+    </div>
+  </div>
+</section>
+
+
+
+  <section id="services" class="py-20 bg-white/5">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-semibold">Our Services</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <article class="rounded-2xl card p-6">
+          <h3 class="text-xl font-medium">Exterior Window Cleaning</h3>
+          <p class="mt-2 text-white/80 text-sm">Purified water‑fed pole system for a spot‑free, brilliant finish across your exterior glass.</p>
+          <ul class="mt-4 text-sm text-white/80 space-y-2">
+            <li>• Mineral‑free rinse</li>
+            <li>• Safe for high windows</li>
+            <li>• Uniform sheen</li>
+          </ul>
+        </article>
+        <article class="rounded-2xl card p-6">
+          <h3 class="text-xl font-medium">Full Detail (Exterior + Screens)</h3>
+          <p class="mt-2 text-white/80 text-sm">Our premium deep clean adds full screen wash + careful frame touch‑ups.</p>
+          <ul class="mt-4 text-sm text-white/80 space-y-2">
+            <li>• Screens washed & dried</li>
+            <li>• Frames & sills attention</li>
+            <li>• Photo proof on request</li>
+          </ul>
+        </article>
+        <article class="rounded-2xl card p-6">
+          <h3 class="text-xl font-medium">Add‑Ons (By Request)</h3>
+          <p class="mt-2 text-white/80 text-sm">Ask about select exterior detailing add‑ons to complement your clean.</p>
+          <ul class="mt-4 text-sm text-white/80 space-y-2">
+            <li>• Spot touch‑ups</li>
+            <li>• Light debris removal</li>
+            <li>• Custom requests</li>
+          </ul>
+        </article>
+      </div>
+     <div class="mt-10 text-center">
+  <a href="#home" class="btn-gold px-6 py-3 rounded-xl font-semibold inline-block scroll-link">
+    Get Free Quote
+  </a>
+  <p class="text-xs text-white/70 mt-2">$50 off first service</p>
+</div>
+
+
+
+        <p class="text-xs text-white/70 mt-2">$50 off first service</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-semibold">Our Process</h2>
+      <div class="mt-8 grid md:grid-cols-4 gap-6 text-sm">
+        <div class="rounded-2xl card p-6">
+          <div class="text-[var(--gold)] font-semibold">1) Rinse & Assess</div>
+          <p class="mt-2 text-white/80">Quick walkthrough + gentle rinse to identify trouble spots.</p>
+        </div>
+        <div class="rounded-2xl card p-6">
+          <div class="text-[var(--gold)] font-semibold">2) Purified Clean</div>
+          <p class="mt-2 text-white/80">Water‑fed pole + deionized water removes film & minerals.</p>
+        </div>
+        <div class="rounded-2xl card p-6">
+          <div class="text-[var(--gold)] font-semibold">3) Detail & Dry</div>
+          <p class="mt-2 text-white/80">Frames & screens attended, uniform sheen checked.</p>
+        </div>
+        <div class="rounded-2xl card p-6">
+          <div class="text-[var(--gold)] font-semibold">4) Final Check</div>
+          <p class="mt-2 text-white/80">Walkthrough + optional photos for your records.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- CHOOSE YOUR CITY SECTION -->
+<!-- ===== CHOOSE YOUR CITY SECTION ===== -->
+<section class="service-areas reveal" id="service-areas">
+  <div class="service-areas-inner">
+
+    <div class="service-areas-header">
+      <h2 class="service-areas-title">Select Your Service Area</h2>
+      <p class="service-areas-subtitle">
+        Choose your city to view availability and booking options.
+      </p>
+    </div>
+
+    <!-- CENTER WRAPPER -->
+    <div class="city-grid-wrap">
+
+      <!-- 3x3 GRID -->
+      <div class="city-grid">
+
+        <!-- Frisco -->
+        <a href="frisco-tx.html" class="city-card" style="background-image:url('frisco-tx.jpg');">
+          <div class="city-content">
+            <div class="city-region">North Dallas</div>
+            <h3>Frisco, TX</h3>
+            <p>Tap for Frisco details & booking.</p>
+          </div>
+        </a>
+
+        <!-- Celina -->
+        <a href="celina-tx.html" class="city-card" style="background-image:url('celina-tx.jpg');">
+          <div class="city-content">
+            <div class="city-region">North Dallas</div>
+            <h3>Celina, TX</h3>
+            <p>Tap for Celina details & booking.</p>
+          </div>
+        </a>
+
+        <!-- Prosper -->
+        <a href="prosper-tx.html" class="city-card" style="background-image:url('prosper-tx.jpg');">
+          <div class="city-content">
+            <div class="city-region">North Dallas</div>
+            <h3>Prosper, TX</h3>
+            <p>Tap for Prosper details & booking.</p>
+          </div>
+        </a>
+
+        <!-- Fayetteville -->
+        <a href="fayetteville-ar.html" class="city-card" style="background-image:url('fayetteville-ar.jpg');">
+          <div class="city-content">
+            <div class="city-region">Northwest Arkansas</div>
+            <h3>Fayetteville, AR</h3>
+            <p>Tap for Fayetteville details & booking.</p>
+          </div>
+        </a>
+
+        <!-- Rogers -->
+        <a href="rogers-ar.html" class="city-card" style="background-image:url('rogers-ar.jpg');">
+          <div class="city-content">
+            <div class="city-region">Northwest Arkansas</div>
+            <h3>Rogers, AR</h3>
+            <p>Tap for Rogers details & booking.</p>
+          </div>
+        </a>
+
+        <!-- Bentonville -->
+        <a href="bentonville-ar.html" class="city-card" style="background-image:url('bentonville-ar.jpg');">
+          <div class="city-content">
+            <div class="city-region">Northwest Arkansas</div>
+            <h3>Bentonville, AR</h3>
+            <p>Tap for Bentonville details & booking.</p>
+          </div>
+        </a>
+
+        <!-- Springdale -->
+        <a href="springdale-ar.html" class="city-card" style="background-image:url('springdale-ar.jpg');">
+          <div class="city-content">
+            <div class="city-region">Northwest Arkansas</div>
+            <h3>Springdale, AR</h3>
+            <p>Tap for Springdale details & booking.</p>
+          </div>
+        </a>
+
+        <!-- Bella Vista -->
+        <a href="bella-vista-ar.html" class="city-card" style="background-image:url('bella-vista-ar.jpg');">
+          <div class="city-content">
+            <div class="city-region">Northwest Arkansas</div>
+            <h3>Bella Vista, AR</h3>
+            <p>Tap for Bella Vista details & booking.</p>
+          </div>
+        </a>
+
+        <!-- McKinney -->
+        <a href="mckinney-tx.html" class="city-card" style="background-image:url('mckinney-tx.jpg');">
+          <div class="city-content">
+            <div class="city-region">North Dallas</div>
+            <h3>McKinney, TX</h3>
+            <p>Tap for McKinney details & booking.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ===== END CHOOSE YOUR CITY SECTION ===== -->
+
+
+<!-- END CHOOSE YOUR CITY SECTION -->
+
+  <section id="faqs" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-semibold">FAQs</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6 text-sm">
+        <div class="rounded-2xl card p-6">
+          <div class="font-medium">Do you use ladders?</div>
+          <p class="text-white/80 mt-1">We primarily use a water‑fed pole system for safety and a consistent finish on high glass.</p>
+        </div>
+        <div class="rounded-2xl card p-6">
+          <div class="font-medium">Will purified water leave spots?</div>
+          <p class="text-white/80 mt-1">No—deionized, mineral‑free water dries clear for a uniform sheen.</p>
+        </div>
+        <div class="rounded-2xl card p-6">
+          <div class="font-medium">Do you clean interior windows?</div>
+          <p class="text-white/80 mt-1">Right now we focus on exterior only. Ask about special cases.</p>
+        </div>
+        <div class="rounded-2xl card p-6">
+          <div class="font-medium">What is your coverage area?</div>
+          <p class="text-white/80 mt-1">Northwest Arkansas & North Dallas. We’ll confirm your address at booking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section id="booking" class="py-24 relative">
+  <div class="absolute inset-0 -z-10 opacity-30" aria-hidden style="background: radial-gradient(700px 200px at 80% 10%, var(--silver), transparent 60%)"></div>
+  <div class="max-w-5xl mx-auto px-4">
+    <div id="bookingCard" class="rounded-3xl card p-6 md:p-10">
+
+
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <h2 class="text-2xl md:text-3xl font-semibold">Book an Appointment</h2>
+        <div class="rounded-full border border-amber-200/20 px-3 py-1 text-xs" style="background:linear-gradient(90deg, rgba(200,167,78,.2), transparent)">
+          $50 off first time • Free quote
+        </div>
+      </div>
+
+     <form action="https://formspree.io/f/maqvvyzy" method="POST" class="space-y-4">
+
+  <input type="hidden" name="form_type" value="Quote Request">
+        <!-- First + Last name (spans full width, then splits into 2) -->
+        <div class="grid gap-1 md:col-span-2">
+          <label class="text-xs text-white/70">Name</label>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input required name="first_name" class="rounded-lg border border-white/15 bg-white/5 px-3 py-2" placeholder="First name" />
+            <input required name="last_name" class="rounded-lg border border-white/15 bg-white/5 px-3 py-2" placeholder="Last name" />
+          </div>
+        </div>
+
+        <div class="grid gap-1">
+          <label class="text-xs text-white/70">Phone</label>
+          <input required name="phone" inputmode="tel" class="rounded-lg border border-white/15 bg-white/5 px-3 py-2" placeholder="214-901-3709" />
+        </div>
+
+        <div class="grid gap-1">
+          <label class="text-xs text-white/70">Email</label>
+          <input required type="email" name="email" class="rounded-lg border border-white/15 bg-white/5 px-3 py-2" placeholder="you@example.com" />
+        </div>
+
+        <div class="grid gap-1">
+          <label class="text-xs text-white/70">Service</label>
+          <select name="service" required class="control" style="background-color: rgba(255,255,255,.05); color: white;">
+
+            <option>Exterior Window Cleaning</option>
+            <option>Full Detail (Exterior + Screens)</option>
+          </select>
+        </div>
+
+        <div class="grid gap-1">
+          <label class="text-xs text-white/70">Preferred Date</label>
+          <input type="date" name="date" class="rounded-lg border border-white/15 bg-white/5 px-3 py-2"/>
+        </div>
+
+        <div class="grid gap-1">
+          <label class="text-xs text-white/70">Preferred Time</label>
+          <input type="time" name="time" class="rounded-lg border border-white/15 bg-white/5 px-3 py-2"/>
+        </div>
+
+        <div class="grid gap-1 md:col-span-2">
+          <label class="text-xs text-white/70">City / Neighborhood</label>
+          <input name="city" class="rounded-lg border border-white/15 bg-white/5 px-3 py-2" placeholder="Northwest Arkansas or North Dallas" />
+        </div>
+
+        <!-- Street Address (between City and Notes, matches other inputs) -->
+        <div class="grid gap-1 md:col-span-2">
+          <label class="text-xs text-white/70">Street Address</label>
+          <input name="address" class="rounded-lg border border-white/15 bg-white/5 px-3 py-2" placeholder="1234 Elm Street" />
+        </div>
+
+        <div class="grid gap-1 md:col-span-2">
+          <label class="text-xs text-white/70">Notes</label>
+          <textarea name="notes" rows="4" class="rounded-lg border border-white/15 bg-white/5 px-3 py-2" placeholder="Gate code, special requests, glass type, etc."></textarea>
+        </div>
+
+        <div class="md:col-span-2 flex items-center gap-3">
+          <button type="submit" class="rounded-xl px-5 py-3 text-sm font-medium btn-gold">Send Request</button>
+          <span class="text-xs text-white/70">We’ll confirm by phone or email.</span>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+
+ <section id="contact" class="py-16">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-6">
+
+    <!-- Contact Card -->
+    <div class="rounded-2xl card p-6">
+      <div class="text-sm text-white/70">Contact</div>
+
+      <!-- Brenden -->
+      <div class="mt-2 text-sm">Brenden Preston – Owner</div>
+      <div class="text-sm">
+        📞 <a href="tel:2149013709" class="underline decoration-white/20 underline-offset-2 hover:text-white">214-901-3709</a>
+      </div>
+      <div class="text-sm mb-4">
+        ✉ <a href="mailto: contactus@trueviewservice.com" class="underline decoration-white/20 underline-offset-2 hover:text-white">trueviewimpact@gmail.com</a>
+      </div>
+
+      <!-- Alex -->
+      <div class="text-sm">Alex Fugiel – Co-Owner</div>
+      <div class="text-sm">
+        📞 <a href="tel:7017414053" class="underline decoration-white/20 underline-offset-2 hover:text-white">701-741-4053</a>
+      </div>
+      <div class="text-sm">
+        ✉ <a href="mailto: contactus@trueviewservice.com" class="underline decoration-white/20 underline-offset-2 hover:text-white">alex.fugiel23@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- Service Areas Card -->
+    <div class="rounded-2xl card p-6">
+      <div class="text-sm text-white/70">Service Areas</div>
+      <div class="mt-2 text-sm">Northwest Arkansas • North Dallas</div>
+
+      <div class="mt-3 aspect-[3/2] rounded-xl overflow-hidden border border-white/10 bg-white/5">
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=1OBxH2VClAHlN2Y9dNYFlIjOIgvC5HzQ"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Offers Card -->
+    <div class="card soft rounded-2xl p-6">
+  <p class="text-[10px] tracking-[0.2em] uppercase text-white/40 mb-2">
+    Why Choose True View
+  </p>
+
+  <h3 class="text-lg font-semibold mb-1">
+    Why Homeowners Choose True View
+  </h3>
+
+  <div class="text-gold text-sm mb-3 tracking-wider">
+    ★★★★★
+  </div>
+
+  <ul class="space-y-2 text-sm text-white/70">
+    <li>• Fully insured & professionally equipped</li>
+    <li>• Advanced water-fed pole technology</li>
+    <li>• Streak-free, detail-focused results</li>
+    <li>• Respectful, uniformed technicians</li>
+    <li>• Trusted across North Texas & Northwest Arkansas</li>
+  </ul>
+</div>
+
+</section>
+
+<section id="social" class="py-24 bg-white/5">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <h2 class="text-xl font-semibold mb-3">Follow Us</h2>
+    <p class="text-white/70 mb-6 max-w-xl mx-auto">
+      Stay connected with True View Services for updates, offers, and results.
+    </p>
+
+    <div class="flex justify-center gap-4">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/trueview.services"
+         target="_blank"
+         class="btn-gold rounded-full px-6 py-3 text-sm font-medium flex items-center gap-2">
+        <img src="instagram.svg" alt="Instagram" class="w-4 h-4">
+        Instagram
+      </a>
+
+      <!-- X -->
+      <a href="https://x.com/YOURUSERNAME"
+         target="_blank"
+         class="btn-gold rounded-full px-6 py-3 text-sm font-medium flex items-center gap-2">
+        <img src="x.svg" alt="X" class="w-4 h-4">
+        
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/YOURPAGE"
+         target="_blank"
+         class="btn-gold rounded-full px-6 py-3 text-sm font-medium flex items-center gap-2">
+        <img src="facebook.svg" alt="Facebook" class="w-4 h-4">
+        Facebook
+      </a>
+    </div>
+  </div>
+</section>
+
+  <footer class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-8 text-xs text-white/60 flex flex-wrap items-center gap-4 justify-between">
+      <div>© <span id="year"></span> True View Services</div>
+      <div class="flex items-center gap-2">
+        <span class="h-[1px] w-8" style="background-color:var(--silver)"></span>
+        <span class="tracking-widest" style="color:var(--silver)">LUXURY • CLEAN</span>
+      </div>
+    </div>
+  
+
+
+<section id="work-with-us" class="border-t border-white/10 bg-black/80">
+
+  <div class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- Left -->
+    <div class="space-y-4">
+      <p class="text-xs tracking-[0.25em] text-white/50 uppercase">
+        Work With True View
+      </p>
+
+      <h2 class="text-2xl font-semibold">
+        Looking for reliable, motivated people.
+      </h2>
+
+      <p class="text-sm text-white/70 max-w-md">
+        True View Services is growing across North Texas and Northwest Arkansas.
+        We’re always looking for dependable, detail-oriented individuals who take pride in quality work.
+      </p>
+
+      <ul class="text-sm text-white/70 space-y-2">
+        <li>• Competitive pay</li>
+        <li>• Flexible schedules</li>
+        <li>• Opportunity to grow with the company</li>
+        <li>• Professional equipment & training provided</li>
+      </ul>
+    </div>
+
+    <!-- Right -->
+    <div class="card soft rounded-2xl p-6 max-w-md">
+      <h3 class="text-lg font-semibold mb-2">Interested in joining the team?</h3>
+      <p class="text-sm text-white/70 mb-4">
+        Click below to learn more and apply.
+      </p>
+
+      <a href="work-with-us.html"
+         class="btn-gold rounded-xl px-5 py-3 text-sm font-semibold inline-flex items-center gap-2">
+        Work With Us
+        <span class="text-xs">↗</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+</footer>
+
+
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Booking via mailto
+    document.getElementById('bookingForm').addEventListener('submit', function(e){ 
+      e.preventDefault();
+      const f = e.target;
+      const lines = [
+        'Name: ' + f.name.value.trim(),
+        'Phone: ' + f.phone.value.trim(),
+        'Email: ' + f.email.value.trim(),
+        'Service: ' + f.service.value,
+        'Preferred Date: ' + (f.date.value || '(any)'),
+        'Preferred Time: ' + (f.time.value || '(any)'),
+        'City/Area: ' + f.city.value.trim(),
+        'Notes: ' + (f.notes.value.trim() || '')
+      ];
+      const subject = encodeURIComponent('Booking Request — ' + f.service.value);
+      const body = encodeURIComponent(lines.join('\n') + '\n—\nSubmitted via True View website');
+      fetch('https://formspree.io/f/maqvvyzy', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(f)))
+      }).then(r => {
+        if (r.ok) {
+          alert('Request sent! We will contact you shortly.');
+          f.reset();
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      });
+    });
+
+    // Smooth offset scrolling
+    const header = document.getElementById('siteHeader');
+    function offsetScrollTo(id){
+      const el = document.querySelector(id);
+      if(!el) return;
+      const y = el.getBoundingClientRect().top + window.scrollY - (header.offsetHeight + 12);
+      window.scrollTo({top:y, behavior:'smooth'});
+    }
+   document.querySelectorAll('a.scroll-link').forEach(a => {
+  a.addEventListener('click', (e) => {
+    const href = a.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      e.preventDefault();
+      offsetScrollTo(href);
+
+      // If they're jumping to booking, glow the booking card
+      if (href === '#home') {
+        const card = document.getElementById('bookingCard');
+        if (!card) return;
+
+        // Re-trigger animation every time
+        card.classList.remove('booking-glow');
+        void card.offsetWidth; // force reflow
+
+        // Wait a moment so the scroll lands first
+        setTimeout(() => {
+          card.classList.add('booking-glow');
+          setTimeout(() => card.classList.remove('booking-glow'), 1500);
+        }, 550);
+      }
+    }
+  });
+});
+
+
+    // Scroll‑spy
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('#mainNav a');
+    const map = {{}}
+    navLinks.forEach(a => {{ map[a.getAttribute('href').replace('#','')] = a; }})
+    const io = new IntersectionObserver((entries)=>{ 
+      entries.forEach(entry=>{ 
+        if(entry.isIntersecting){ 
+          const id = entry.target.getAttribute('id'); 
+          navLinks.forEach(a => a.classList.remove('active')); 
+          if(map[id]) map[id].classList.add('active');
+        }
+      })
+    }, {{rootMargin:'-50% 0px -45% 0px', threshold: [0,0.25,0.5,0.75,1]}});
+    sections.forEach(s => io.observe(s));
+  </script>
+
+<script>
+  // Hero quote form via Formspree
+  const heroForm = document.getElementById('heroQuoteForm');
+  if(heroForm){
+    heroForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      fetch('https://formspree.io/f/maqvvyzy', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(heroForm)))
+      }).then(r => {
+        if(r.ok){
+          heroForm.classList.add('hidden');
+          document.getElementById('quote-thank-you').classList.remove('hidden');
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      });
+    });
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    const els = document.querySelectorAll(".reveal");
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) e.target.classList.add("visible");
+      });
+    }, { threshold: 0.12 });
+
+    els.forEach(el => io.observe(el));
+  });
+</script>
+
+
+
+</body>
+</html>
